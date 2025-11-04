@@ -157,10 +157,6 @@ Configuration-based Automation
 
 ---
 
-## 🖼️ Project Screenshots
-
-Below are screenshots that show the project in action 👇
-
 ### 1️⃣ Project Folder Structure
 Shows all files including `backup.sh`, `backup.config`, and the backups folder.
 
@@ -270,6 +266,25 @@ The script tested whether the .tar.gz file can be opened and read properly — c
 [2025-11-04 12:11:05] SUCCESS: Backup completed successfully for /c/Users/Dell/Desktop/test_backup/data
 
 
+## 🧩 Design Decisions
+
+- Used **Bash scripting** for portability and native Linux compatibility.
+- Chose **.tar.gz** format for fast compression and easy restoration.
+- Used **MD5 checksum** to ensure integrity of backups.
+- Separated configuration into `backup.config` to make the script reusable for different users.
+- Implemented a **lock file** (`/tmp/backup.lock`) to prevent multiple script runs.
+- Adopted a **timestamp-based naming scheme** for clear version tracking.
+
+
+## ⚠️ Known Limitations
+
+- Incremental backups are not yet implemented (full backup every time).
+- Email notification is simulated (writes to a log instead of sending).
+- Currently designed for local backups; remote (S3/FTP) not supported.
+- Tested primarily in Git Bash / Linux environment.
+
+
+
 🔹 Meaning:
 All steps finished without errors — your backup is complete, verified, and safe 🎉
 
@@ -280,6 +295,8 @@ Then it started the actual backup, created a compressed .tar.gz file, and genera
 The checksum was validated successfully, confirming the backup file wasn’t corrupted.
 Next, the script checked for old backups based on the rotation policy, found none to delete, and tested the backup integrity.
 Finally, it confirmed the backup completed successfully.”
+
+
  Author Details
 Name: MALGIREDDY SAIDEEP
 
