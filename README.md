@@ -260,7 +260,7 @@ Name: MALGIREDDY SAIDEEP
 
 Course: DevOps Practice Test
 
-Instructor: (Add your instructor’s name if applicable)
+Instructor: FAVOUR LAWRENCE
 
 GitHub Repo: https://github.com/MALGIREDDY/DevOps-Practice-Test
 
