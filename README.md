@@ -154,6 +154,48 @@ Tar and Gzip utilities
 
 Configuration-based Automation
 
+
+---
+
+## 🖼️ Project Screenshots
+
+Below are screenshots that show the project in action 👇
+
+### 1️⃣ Project Folder Structure
+Shows all files including `backup.sh`, `backup.config`, and the backups folder.
+
+![Folder Structure](./screenshots/screenshot1_folder_structure.png)
+
+---
+
+### 2️⃣ Script Execution (Terminal Output)
+Displays the terminal output when running the backup script successfully.
+
+![Terminal Output](./screenshots/screenshot2_terminal_output.png)
+
+---
+
+### 3️⃣ Backups Folder
+Shows the generated `.tar.gz` backup files saved in the destination folder.
+
+![Backups Folder](./screenshots/screenshot3_backups_folder.png)
+
+---
+
+### 4️⃣ Backup Log File
+Shows log entries confirming backup creation and verification.
+
+![Backup Log File](./screenshots/screenshot4_log_file.png)
+
+---
+
+### 5️⃣ Dry Run Example (Optional)
+Displays how the script previews actions in `--dry-run` mode before performing backups.
+
+![Dry Run Output](./screenshots/screenshot5_dryrun_output.png)
+
+---
+
  Author Details
 Name: MALGIREDDY SAIDEEP
 
