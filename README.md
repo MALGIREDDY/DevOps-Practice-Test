@@ -1,4 +1,4 @@
-# 🧰 Automated Backup Script — DevOps Practice Test
+#  Automated Backup Script — DevOps Practice Test
 
 This repository contains a **Bash Automation Project** designed to demonstrate DevOps fundamentals — automation, backup management, and configuration handling.  
 It was created as part of a **DevOps Bash Scripting Practice Test**.
@@ -27,7 +27,7 @@ Copy code
 
 ---
 
-## ⚙️ Configuration File — `backup.config`
+##  Configuration File — `backup.config`
 
 The `backup.config` file defines parameters for the backup process.
 
