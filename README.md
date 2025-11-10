@@ -20,7 +20,7 @@ DevOps-Practice-Test/
 │       └── README.md          # Documentation for the project
 │
 ├── screenshots                 
-└── ...
+└── backup.logs
 </pre>
 
 > ##  Files Explanation
