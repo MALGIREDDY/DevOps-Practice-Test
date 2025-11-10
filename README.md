@@ -78,13 +78,13 @@ After running the backup, your destination folder (/backups) will look like this
 <h2 style="background-color:#222; color:white; padding:8px; border-radius:6px;">
 📦 Backup Directory Structure
 </h2>
-
 backups/
 ├── documents_backup_2025-11-03_11-30-15.tar.gz
 ├── pictures_backup_2025-11-03_11-32-07.tar.gz
 └── backup.log
 [2025-11-03 11:30:15] Backup started for /home/user/documents  
 [2025-11-03 11:30:17] Backup completed successfully -> documents_backup_2025-11-03_11-30-15.tar.gz
+</pre>
 
 
 > ## --- DevOps Concepts Learned
