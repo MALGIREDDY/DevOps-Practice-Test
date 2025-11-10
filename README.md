@@ -6,7 +6,7 @@
  
  ---- In a real DevOps environment, engineers often need to back up important files, configurations, or logs regularly. Manually doing this every time is inefficient and prone to errors. **Purpose:** To develop an automated backup solution that: -  Takes backups of any folder provided by the user -  Reads backup settings from a configuration file - Skips unnecessary files and folders (like .git, node_modules, .cache) - Supports a **Dry Run** mode to preview actions before real backup - 🪵 Logs all actions for traceability -  Demonstrates proper DevOps workflow using Git and GitHub ---
  
-## Repository Overview
+> ##  Repository Overview
 DevOps-Practice-Test/
 │ ├── bash-scripting_test/
 │ └── test-1/ │
@@ -15,18 +15,18 @@ DevOps-Practice-Test/
 │ └── README.md # Documentation for the project 
 ├── README.md # Root-level detailed project explanation  ...
 
-#### Files Explanation
+> ##  Files Explanation
 
  1) **backup.sh** The main Bash script that performs the backup operation. It: - Checks if the backup.config file exists - Reads configuration variables (destination, exclusions, etc.) - Creates compressed .tar.gz backups with timestamps - Logs backup results into backup.log - Supports --dry-run mode to preview actions **Key Bash concepts used:** - Conditional statements (if, else) - Reading variables using source - Command-line arguments ($1, $2) - Logging and redirection - String manipulation and timestamp generation using date ---
 2) **backup.config** This configuration file makes the script **dynamic**, so users don’t need to modify the script itself. **Example:**
 bash
-# Directory where backups will be saved
-BACKUP_DESTINATION="/c/Users/Dell/Desktop/bash practice/backups"
 
-# File or folder patterns to skip during backup
+> ## Directory where backups will be saved
+BACKUP_DESTINATION="/c/Users/Dell/Desktop/bash practice/backups"
+> ## File or folder patterns to skip during backup
 EXCLUDE_PATTERNS=".git,node_modules,.cache"
 
-# Log file location
+> ## Log file location
 LOG_FILE="backup.log"
  How to Run the Project
 1) Open Git Bash and go to your project directory:
