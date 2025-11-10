@@ -7,18 +7,22 @@
  ---- In a real DevOps environment, engineers often need to back up important files, configurations, or logs regularly. Manually doing this every time is inefficient and prone to errors. **Purpose:** To develop an automated backup solution that: -  Takes backups of any folder provided by the user -  Reads backup settings from a configuration file - Skips unnecessary files and folders (like .git, node_modules, .cache) - Supports a **Dry Run** mode to preview actions before real backup - 🪵 Logs all actions for traceability -  Demonstrates proper DevOps workflow using Git and GitHub ---
  
 <h2 style="background-color:#222; color:white; padding:8px; border-radius:6px;">
-📁 Repository Overview
+ Repository Overview
 </h2>
+
+<pre>
 DevOps-Practice-Test/
 │
 ├── bash-scripting_test/
-│ └── test-1/
-│ ├── backup.sh # Main automation script
-│ ├── backup.config # Configuration file for backup parameters
-│ └── README.md # Documentation for the project
+│   └── test-1/
+│       ├── backup.sh          # Main automation script
+│       ├── backup.config      # Configuration file for backup parameters
+│       └── README.md          # Documentation for the project
 │
-├── README.md # Root-level detailed project explanation
+├── README.md                  # Root-level detailed project explanation
 └── ...
+</pre>
+
 > ##  Files Explanation
 
  1) **backup.sh** The main Bash script that performs the backup operation. It: - Checks if the backup.config file exists - Reads configuration variables (destination, exclusions, etc.) - Creates compressed .tar.gz backups with timestamps - Logs backup results into backup.log - Supports --dry-run mode to preview actions **Key Bash concepts used:** - Conditional statements (if, else) - Reading variables using source - Command-line arguments ($1, $2) - Logging and redirection - String manipulation and timestamp generation using date ---
