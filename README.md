@@ -180,7 +180,7 @@ Copy code
 [2025-11-04 12:11:05] SUCCESS: Backup verified and ready!
 Ensures that the backup archive can be opened and read properly.
 
-8)*** Final Status
+8) Final Status
 swift
 Copy code
 [2025-11-04 12:11:05] SUCCESS: Backup completed successfully for /c/Users/Dell/Desktop/test_backup/data
@@ -195,14 +195,14 @@ Used backup.config for flexibility
 Added lock file (/tmp/backup.lock) to prevent duplicate runs
 Timestamp-based naming for easy version tracking
 
-> ## *** Known Limitations****
+> ## *** Known Limitations ****
 
 Incremental backups not yet implemented (full backups only)
 Email notifications simulated (logs only)
 Designed for local backups (S3/FTP support not added yet)
 Tested mainly in Git Bash / Linux environments
 
-> ## **** Author Details*****
+> ## **** Author Details *****
  
 Name: MALGIREDDY SAIDEEP
 
