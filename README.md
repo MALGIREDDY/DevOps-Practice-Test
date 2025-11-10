@@ -26,10 +26,10 @@ Repository Overview
 DevOps-Practice-Test/
 │
 ├── bash-scripting_test/
-│   ── test-1/
+│   └── test-1/
 │       ├── backup.sh          # Main automation script
 │       ├── backup.config      # Configuration file for backup parameters
-│       ── README.md          # Documentation for the project
+│       └── README.md          # Documentation for the project
 │
 ├── README.md                  # Root-level detailed project explanation
 └── ...
@@ -79,13 +79,19 @@ EXCLUDE_PATTERNS=".git,node_modules,.cache"
 LOG_FILE="backup.log"
 
 How to Run the Project
+
 Step 1: Open Git Bash and go to your project directory:
+
 cd "/c/Users/Dell/Desktop/bash practice/DevOps-Practice-Test/bash-scripting_test/test-1"
 
+
 Step 2: Give execute permissions to the script:
+
 chmod +x backup.sh
 
+
 Step 3: Run in Dry Run Mode (to test without actual backup):
+
 ./backup.sh --dry-run /path/to/source/folder
 
 
@@ -96,7 +102,9 @@ Example Output:
 [INFO] Would save backup to: /c/Users/Dell/Desktop/bash practice/backups
 [INFO] Would skip patterns: .git,node_modules,.cache
 
+
 Step 4: Run the Actual Backup:
+
 ./backup.sh /path/to/source/folder
 
 
@@ -111,9 +119,9 @@ Output Example
 After running the backup, your destination folder will look like this:
 
 backups/
-── documents_backup_2025-11-03_11-30-15.tar.gz
-── pictures_backup_2025-11-03_11-32-07.tar.gz
-── backup.log
+├── documents_backup_2025-11-03_11-30-15.tar.gz
+├── pictures_backup_2025-11-03_11-32-07.tar.gz
+└── backup.log
 
 Logging Example (backup.log)
 [2025-11-03 11:30:15] Backup started for /home/user/documents
@@ -213,16 +221,26 @@ Tested mainly in Git Bash / Linux environments
 
 Summary (Quick Explanation)
 
-First, the script runs in dry run mode to show what will be backed up.
-Then it creates a compressed .tar.gz backup file and generates an MD5 checksum to verify integrity.
-The checksum validation confirms that the file is not corrupted.
-Next, it applies a rotation policy to manage backups, tests archive integrity, and finally confirms successful completion.
+The script runs in Dry Run Mode first to show what will be backed up.
+
+Then it creates a compressed .tar.gz backup file.
+
+Generates an MD5 checksum to verify integrity.
+
+Applies a rotation policy to manage old backups.
+
+Tests archive integrity.
+
+Finally confirms successful completion.
 
 Author Details
 
 Name: MALGIREDDY SAIDEEP
+
 Course: DevOps Practice Test
+
 Instructor: FAVOUR LAWRENCE
+
 GitHub Repo: https://github.com/MALGIREDDY/DevOps-Practice-Test
 
 Date of Submission: November 2025
