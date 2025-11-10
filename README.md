@@ -1,8 +1,8 @@
-****** Automated Backup Script #########
+> ## Automated Backup Script 
 
 — DevOps Bash Scripting Project This project is part of a **DevOps Practice Test**, where the goal is to automate the process of taking file backups using **Bash scripting**. It demonstrates core DevOps skills such as automation, file handling, configuration management, Git usage, and working with real-world directory structures. ---
 
-******** Project Objective#####
+>## Project Objective
  
  ---- In a real DevOps environment, engineers often need to back up important files, configurations, or logs regularly. Manually doing this every time is inefficient and prone to errors. **Purpose:** To develop an automated backup solution that: -  Takes backups of any folder provided by the user -  Reads backup settings from a configuration file - Skips unnecessary files and folders (like .git, node_modules, .cache) - Supports a **Dry Run** mode to preview actions before real backup - 🪵 Logs all actions for traceability -  Demonstrates proper DevOps workflow using Git and GitHub ---
  
@@ -67,7 +67,7 @@ Copy code
 After running the backup, your destination folder (/backups) will look like this:
 
 
-backups/
+> ## backups/
 ├── documents_backup_2025-11-03_11-30-15.tar.gz
 ├── pictures_backup_2025-11-03_11-32-07.tar.gz
 └── backup.log
@@ -78,7 +78,7 @@ Copy code
 [2025-11-03 11:30:17] Backup completed successfully -> documents_backup_2025-11-03_11-30-15.tar.gz
 This helps track backup history and troubleshooting.
 
---- DevOps Concepts Learned
+> ## --- DevOps Concepts Learned
 --Concept	Description
 --Automation	Created an automatic backup process using Bash
 --Configuration Management	Used backup.config for dynamic behavior
@@ -87,15 +87,12 @@ This helps track backup history and troubleshooting.
 --Testing	Used --dry-run to verify results
 --Logging	Implemented logging for debugging and record-keeping
 
--- Real-World Use Cases
+> ## -- Real-World Use Cases
+> 
 This type of automation can be used by:
-
 DevOps Engineers to back up configuration files from servers
-
 Developers to save project snapshots daily
-
 System Administrators for automated periodic backups
-
 Teams practicing GitOps or CI/CD scripting
 
 -- Tools & Technologies Used
@@ -106,27 +103,28 @@ Teams practicing GitOps or CI/CD scripting
 --Configuration-based Automation
 --Screenshots
 
-1) Project Folder Structure
+> ## 1) Project Folder Structure
 Shows all files including backup.sh, backup.config, and backups folder.
 
 
-2) Script Execution (Terminal Output)
+> ## 2) Script Execution (Terminal Output)
 Displays terminal output when running the script successfully.
 
 
-3) Backups Folder
+> ## 3) Backups Folder
 Shows the generated .tar.gz backup files saved in the destination folder.
 
 
-4) Backup Log File
+> ## 4) Backup Log File
 Displays log entries confirming backup creation and verification.
 
 
-5) Dry Run Example
+> ## 5) Dry Run Example
 Previews how the script behaves in --dry-run mode.
 
 
- Step-by-Step Explanation of Each Section
+> ##  Step-by-Step Explanation of Each Section
+> 
 1) Dry Run Mode
 yaml
 Copy code
@@ -180,7 +178,7 @@ Copy code
 [2025-11-04 12:11:05] SUCCESS: Backup completed successfully for /c/Users/Dell/Desktop/test_backup/data
  Backup process finished without errors — backup is complete, verified, and safe.
 
-**** Design Decisions****
+> ## **** Design Decisions****
  
 Used Bash scripting for portability and Linux compatibility
 Chose .tar.gz for efficient compression
@@ -189,14 +187,14 @@ Used backup.config for flexibility
 Added lock file (/tmp/backup.lock) to prevent duplicate runs
 Timestamp-based naming for easy version tracking
 
-*** Known Limitations****
+> ## *** Known Limitations****
 
 Incremental backups not yet implemented (full backups only)
 Email notifications simulated (logs only)
 Designed for local backups (S3/FTP support not added yet)
 Tested mainly in Git Bash / Linux environments
 
-**** Author Details*****
+> ## **** Author Details*****
  
 Name: MALGIREDDY SAIDEEP
 
