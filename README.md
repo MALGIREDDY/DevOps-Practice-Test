@@ -19,7 +19,7 @@ DevOps-Practice-Test/
 │       ├── backup.config      # Configuration file for backup parameters
 │       └── README.md          # Documentation for the project
 │
-├── README.md                  # Root-level detailed project explanation
+├── screenshots                 
 └── ...
 </pre>
 
