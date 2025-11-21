@@ -286,7 +286,7 @@ logs.txt
 ```
 ERROR: Source folder does not exist.
 ```
-## Screenshots
+## Screenshot
 
 ### 1. Backup Execution  
 ![Backup Execution](screenshots/screenshot1.png)
