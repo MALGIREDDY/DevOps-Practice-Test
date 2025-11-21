@@ -1,5 +1,5 @@
 <h1 style="background-color:#222; color:white; padding:15px; border-radius:10px; text-align:center;">
-🚀 Automated Backup Script — DevOps Bash Scripting Project
+ Automated Backup Script — DevOps Bash Scripting Project
 </h1>
 
 This project is part of a **DevOps Practice Test**, where the goal is to automate the process of taking file backups using **Bash scripting**.  
@@ -8,7 +8,7 @@ It demonstrates core DevOps skills such as automation, configuration management,
 ---
 
 <h2 style="background-color:#222; color:white; padding:8px; border-radius:6px;">
-🎯 Project Objective
+ Project Objective
 </h2>
 
 In real DevOps environments, engineers often need to back up important files, configurations, or logs regularly.  
@@ -44,7 +44,7 @@ DevOps-Practice-Test/
 ---
 
 <h2 style="background-color:#222; color:white; padding:8px; border-radius:6px;">
-⚙️ Files Explanation
+ Files Explanation
 </h2>
 
 **1. backup.sh**  
