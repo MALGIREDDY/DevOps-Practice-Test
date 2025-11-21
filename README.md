@@ -288,10 +288,7 @@ ERROR: Source folder does not exist.
 ```
 ## Screenshots
 
-### 1. Project Folder Screenshot
-![Project Folder](screenshots/screenshot1.png)
-
-### 2. Backup Execution (Optional but Recommended)
+### 1. Backup Execution (Optional but Recommended)
 ![Backup Execution](screenshots/screenshot2.png)
 
 ## G. How the Script Was Developed (Step-by-Step)
