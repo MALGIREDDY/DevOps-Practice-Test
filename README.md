@@ -352,7 +352,7 @@ These are the key Linux commands used:
 | `df -h`      | Check available disk space |
 
 ---
-## I. Sample Log Output (Required)
+## I. Sample Log Output 
 ```
 [2025-11-21 11:57:21] INFO: Backup started for test_backup
 [2025-11-21 11:57:22] INFO: Backup file created successfully
