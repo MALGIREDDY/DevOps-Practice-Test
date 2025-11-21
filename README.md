@@ -1,33 +1,39 @@
-📦 Automated Backup System
-A Bash-Scripting Based Backup Automation Project
+<p align="center">
+  <img src="https://img.icons8.com/color/96/000000/console.png" />
+  <img src="https://img.icons8.com/color/96/000000/processor.png" />
+  <img src="https://img.icons8.com/color/96/000000/cloud-sync.png" />
+</p>
 
-This project was developed as part of the DevOps Practical Assessment.
-It focuses on building a real-world backup automation utility using Bash — similar to tasks handled by DevOps and SRE engineers in production environments.
+<h1 align="center">Automated Backup System</h1>
+<p align="center">Linux • Bash • DevOps Automation</p>
 
-1. 🔍 Project Summary
+<p align="center">
+  <img src="https://img.shields.io/badge/Bash_Scripting-1F1F1F?style=for-the-badge&logo=gnubash&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux_Environment-000000?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Automation-5C4EE5?style=for-the-badge&logo=githubactions&logoColor=white"/>
+  <img src="https://img.shields.io/badge/DevOps_Practices-0066CC?style=for-the-badge"/>
+</p>
 
-Modern systems generate logs, configs, and data that need regular backups.
-Manual backups cause errors and are not scalable.
+---
 
-This project implements an:
+#  Overview
 
-Automated Backup System with:
+The **Automated Backup System** is a Bash-based DevOps script designed to automate directory backups using:
 
-Dynamic configuration (via backup.config)
+- Timestamped compressed archives  
+- Configuration-based execution  
+- MD5 checksum integrity verification  
+- Exclusion rules for unnecessary directories  
+- Dry-run simulation mode  
+- Rotation policy for backup cleanup  
+- Dedicated logging for traceability  
 
-Compression of backup archives
+This project showcases real DevOps engineering capabilities: automation, observability, shell scripting, and system reliability.
 
-Exclusion rules for unnecessary folders
+---
 
-Dry-run verification mode
-
-Logging for auditing
-
-Checksum validation
-
-Backup retention
-
-2. 🗂 Repository Structure
+#  Repository Structure
+```
 DevOps-Practice-Test/
 │
 ├── bash-scripting_test/
@@ -36,117 +42,168 @@ DevOps-Practice-Test/
 │       ├── backup.config
 │       └── README.md
 │
-├── screenshots/
-└── backup.logs/
+├── backup.logs/
+└── screenshots/
+```
 
-3. 🚀 Features Implemented
-Backup Functionality
 
-Backs up any directory provided as input
+#  Features
 
-Creates compressed .tar.gz files
+###  Backup Engine
+- Creates `.tar.gz` compressed archives  
+- Auto timestamp naming  
+- Error handling and logging  
 
-Generates MD5 checksums
+###  Dry Run (Simulation Mode)
+View the entire backup plan without creating files.
 
-Dry Run Mode (--dry-run)
+###  Exclusion Filtering
+Skip large/unwanted directories:
+- `.git`
+- `node_modules`
+- `.cache`
 
-Shows planned actions without performing backup
+###  Integrity Validation
+MD5 checksum ensures archive consistency.
 
-Helps prevent mistakes before actual runs
+###  Logging System
+Tracks:
+- Backup start/end time  
+- Created archive path  
+- Errors/warnings  
 
-Exclusion Support
+###  Backup Rotation Policy
+Automatically removes older backups.
 
-Skip unwanted directories like:
+---
 
-.git
+## Configuration (backup.config)
 
-node_modules
-
-.cache
-
-Logging
-
-Every backup action is recorded in:
-
-backup.log
-
-Backup Rotation
-
-Automatically removes older backups (based on policy).
-
-4.  Configuration File (backup.config)
-
-A simple configuration-driven design makes the script portable and reusable.
-
-Example:
-
-BACKUP_DESTINATION="/c/Users/Dell/Desktop/backups"
+BACKUP_DESTINATION="/path/to/backups"
 EXCLUDE_PATTERNS=".git,node_modules,.cache"
 LOG_FILE="backup.log"
 
-5. 🖥 How to Run
-1. Navigate to project
-cd "DevOps-Practice-Test/bash-scripting_test/test-1"
+yaml
+Copy code
 
-2. Give execution permissions
+---
+
+##  Usage
+
+### 1️⃣ Move to project directory
+cd DevOps-Practice-Test/bash-scripting_test/test-1
+
+shell
+Copy code
+
+### 2️⃣ Provide executable permission
 chmod +x backup.sh
 
-3. Test in Dry Run Mode
-./backup.sh --dry-run /path/to/folder
+shell
+Copy code
 
-4. Run Actual Backup
-./backup.sh /path/to/folder
+### 3️⃣ Run Dry Run (Recommended First)
+./backup.sh --dry-run /path/to/source
 
-6. 📁 Backup Output Example
+shell
+Copy code
+
+### 4️⃣ Run Actual Backup
+./backup.sh /path/to/source
+
+yaml
+Copy code
+
+---
+
+##  Architecture Flow
+
+```
+INPUT
+  ↓
+CONFIG LOADER
+  ↓
+EXCLUSION ENGINE
+  ↓
+ARCHIVE CREATION (.tar.gz)
+  ↓
+CHECKSUM GENERATION (MD5)
+  ↓
+INTEGRITY VALIDATION
+  ↓
+ROTATION POLICY
+  ↓
+LOGGING SYSTEM
+```
+
+---
+
+##  Backup Output Example
+
+```
 backups/
-├── documents_backup_2025-11-03_11-30-15.tar.gz
-├── pictures_backup_2025-11-03_11-32-07.tar.gz
+├── data_backup_2025-11-03_11-30-15.tar.gz
+├── project_backup_2025-11-03_11-45-21.tar.gz
 └── backup.log
+```
+
+---
+
+##  Log Sample
+
+```
+[2025-11-03 11:30:17] Backup completed → data_backup_2025-11-03_11-30-15.tar.gz
+```
 
 
-Example Log Entry:
+yaml
+Copy code
 
-[2025-11-03 11:30:17] Backup completed -> documents_backup_2025-11-03_11-30-15.tar.gz
+---
 
-7. 🧠 Skills Demonstrated
-Area	What I Implemented
-Bash Automation	Full automated backup system
-Linux Commands	tar, gzip, md5sum, directory checks
-Config Management	Parameterization via backup.config
-Logging	Detailed, timestamped logs
-Testing	Dry-run mode
-Git	Version control & GitHub repo setup
-8. 📌 Design Decisions
+##  Skills Demonstrated
 
-Config-Driven → Script is reusable without modification
+### DevOps Engineering  
+- Automation design  
+- Observability & logging  
+- Backup strategy  
+- Configuration management  
 
-Checksum Validation → Ensures archive integrity
+### Bash Scripting  
+- Argument parsing  
+- Pattern filtering  
+- Tar/gzip operations  
+- MD5 checksum  
+- Lock-file handling  
 
-Rotation Policy → Prevents backup directory from growing indefinitely
+### Linux Operations  
+- File system handling  
+- Logging logic  
+- Error management  
 
-Error Handling → Messages for missing folder, bad config, etc.
+---
 
-Lock File → Prevents multiple running instances
+##  Tools & Technologies
 
-9. ⚠ Limitations
+<p align="left">
+  <img src="https://img.shields.io/badge/Bash-1f1f1f?style=flat&logo=gnubash&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-000000?style=flat&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F2524D?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" />
+</p>
 
-Only supports full backups, not incremental
+---
 
-No cloud storage backups yet (S3, GDrive, etc.)
+##  Limitations
+- Full backups only (incremental not implemented)  
+- No cloud upload (S3/Azure/GCP not added)  
+- No alerting system (Slack/Email not implemented)  
 
-Tested on Git Bash + Ubuntu; may vary slightly on other shells
+---
 
-10. 👨‍💻 Author
-
-Name: MALGIREDDY SAIDEEP
-Course: DevOps Practical Assessment
-Instructor: FAVOUR LAWRENCE
-GitHub: https://github.com/MALGIREDDY/DevOps-Practice-Test
-
-Submission Date: November 2025
-
-
-
-Premium Enterprise Documentation Style
-
-Modern Developer Portfolio Style
+##  Author
+**Name:** MALGIREDDY SAIDEEP  
+**Assessment:** DevOps Practical Test  
+**Instructor:** FAVOUR LAWRENCE  
+**Repo:** https://github.com/MALGIREDDY/DevOps-Practice-Test  
+**Submitted:** November 2025  
