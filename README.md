@@ -67,8 +67,49 @@ backup-system/
 
 ## C. How It Works
 
-### 1. Rotation Algorithm
-The script keeps only a limited number of recent backups.
+### 1. Rotation Algorithm (Daily, Weekly, Monthly Retention)
+
+To fully match the project requirements, the script must maintain three types of
+retention policies:
+
+- **7 Daily backups**
+- **4 Weekly backups**
+- **3 Monthly backups**
+
+This ensures the system has recovery points across recent days, past weeks, and
+past months.
+
+#### How rotation works:
+
+1. **Daily Retention (7 days)**
+   - The script groups backups by date and keeps only the **newest backup from each of the last 7 days**.
+   - Any additional backups created on the same day are deleted.
+
+2. **Weekly Retention (4 weeks)**
+   - From the last 4 weeks, the script keeps **one backup per week** (usually the most recent one).
+   - Older weekly backups are removed.
+
+3. **Monthly Retention (3 months)**
+   - The script keeps **one backup from each of the last 3 months**.
+   - Older monthly backups are deleted automatically.
+
+#### Retention Settings (from backup.config)
+
+```
+DAILY_KEEP=7
+WEEKLY_KEEP=4
+MONTHLY_KEEP=3
+```
+
+#### Why this retention policy is needed?
+
+This prevents the backup directory from growing endlessly while still keeping:
+
+- Short-term backups (daily)
+- Medium-term backups (weekly)
+- Long-term backups (monthly)
+
+This multi-level retention strategy matches real enterprise backup policies.
 
 Steps:
 1. Count existing backups.  
