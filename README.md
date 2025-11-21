@@ -201,6 +201,12 @@ Copy code
 
 ---
 
+Backup Execution
+The following screenshot shows the backup being executed successfully:
+
+![Screenshot](screenshots/Screenshot%201.png.png)
+
+
 ##  Author
 **Name:** MALGIREDDY SAIDEEP  
 **Assessment:** DevOps Practical Test  
