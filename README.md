@@ -2,10 +2,14 @@
   <img src="https://img.icons8.com/color/96/000000/console.png" />
   <img src="https://img.icons8.com/color/96/000000/processor.png" />
   <img src="https://img.icons8.com/color/96/000000/cloud-sync.png" />
-</p>
-
+</p
+ HEAD
 <h1 align="center">Automated Backup System</h1>
 <p align="center">Linux • Bash • DevOps Automation</p>
+
+.This project is part of a DevOps Practice Test, where the goal is to automate the process of taking file backups using Bash scripting.
+It demonstrates core DevOps skills such as automation, file handling, configuration management, Git usage, and working with real-world directory structures.
+73a0a64 (Updated screenshots and README formatting)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Bash_Scripting-1F1F1F?style=for-the-badge&logo=gnubash&logoColor=white"/>
@@ -207,9 +211,86 @@ The following screenshot shows the backup being executed successfully:
 ![Screenshot](screenshots/Screenshot%201.png.png)
 
 
+ HEAD
 ##  Author
 **Name:** MALGIREDDY SAIDEEP  
 **Assessment:** DevOps Practical Test  
 **Instructor:** FAVOUR LAWRENCE  
 **Repo:** https://github.com/MALGIREDDY/DevOps-Practice-Test  
 **Submitted:** November 2025  
+
+Confirms configuration and paths before actual execution.
+
+2. Backup Start
+[2025-11-04 12:11:02] INFO: Starting backup of /c/Users/Dell/Desktop/test_backup/data
+
+3. Backup Archive Created
+[2025-11-04 12:11:03] SUCCESS: Backup created: /c/Users/Dell/Desktop/bash practice/backups/backup-2025-11-04-1211.tar.gz
+
+4. Checksum Saved
+[2025-11-04 12:11:04] INFO: Checksum saved: /c/Users/Dell/Desktop/bash practice/backups/backup-2025-11-04-1211.tar.gz.md5
+
+5. Checksum Verification
+[2025-11-04 12:11:04] SUCCESS: Checksum verified successfully.
+
+6. Backup Rotation Policy
+[2025-11-04 12:11:04] INFO: Applying backup rotation policy...
+[2025-11-04 12:11:05] INFO: No old backups to delete.
+
+7. Integrity Test
+[2025-11-04 12:11:05] INFO: Testing backup integrity...
+[2025-11-04 12:11:05] SUCCESS: Backup verified and ready!
+
+8. Final Status
+[2025-11-04 12:11:05] SUCCESS: Backup completed successfully for /c/Users/Dell/Desktop/test_backup/data
+
+Design Decisions
+
+Used Bash scripting for portability and Linux compatibility
+
+Chose .tar.gz for efficient compression
+
+Implemented MD5 checksum for backup integrity
+
+Used backup.config for flexibility
+
+Added lock file (/tmp/backup.lock) to prevent duplicate runs
+
+Timestamp-based naming for easy version tracking
+
+Known Limitations
+
+Incremental backups not yet implemented (full backups only)
+
+Email notifications simulated (logs only)
+
+Designed for local backups (S3/FTP support not added yet)
+
+Tested mainly in Git Bash / Linux environments
+
+Summary (Quick Explanation)
+
+The script runs in Dry Run Mode first to show what will be backed up.
+
+Then it creates a compressed .tar.gz backup file.
+
+Generates an MD5 checksum to verify integrity.
+
+Applies a rotation policy to manage old backups.
+
+Tests archive integrity.
+
+Finally confirms successful completion.
+
+Author Details.....
+
+Name: MALGIREDDY SAIDEEP
+
+Course: DevOps Practice Test
+
+Instructor: FAVOUR LAWRENCE
+
+GitHub Repo: https://github.com/MALGIREDDY/DevOps-Practice-Test
+
+Date of Submission: November 2025
+ 73a0a64 (Updated screenshots and README formatting)
