@@ -79,7 +79,7 @@ EXCLUDE_PATTERNS=".git,node_modules,.cache"
 # Log file location
 LOG_FILE="backup.log"
 
-<h2 style="background-color:#222; color:white; padding:8px; border-radius:6px;"> 👤 Author Details </h2>
+👤 Author Details 
 
 Name: MALGIREDDY SAIDEEP
 
