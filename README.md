@@ -246,6 +246,24 @@ ERROR: Source folder does not exist.
 ![Backup Execution](screenshots/screenshot1.png)
 
 ---
+## I. Sample Log Output
+
+Below is an example of the log entries generated during a full backup process.  
+This shows the timestamp, status of each step, and confirms whether the backup succeeded.
+
+```
+[2025-11-21 11:57:21] INFO: Backup started for test_backup
+[2025-11-21 11:57:21] INFO: Creating compressed archive...
+[2025-11-21 11:57:21] SUCCESS: Backup archive created successfully
+[2025-11-21 11:57:22] INFO: Generating checksum file
+[2025-11-21 11:57:22] SUCCESS: Checksum saved
+[2025-11-21 11:57:22] INFO: Verifying checksum integrity
+[2025-11-21 11:57:22] SUCCESS: Checksum verified successfully
+[2025-11-21 11:57:22] INFO: Applying rotation policy
+[2025-11-21 11:57:22] INFO: No old backups to delete
+[2025-11-21 11:57:23] SUCCESS: Backup completed successfully
+```
+
 
 ## J. Final Tips and Learning Reflection
 - I built and tested each feature step-by-step.  
